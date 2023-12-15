@@ -1,0 +1,15 @@
+load("@prelude//toolchains:cxx.bzl", "system_cxx_toolchain")
+load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain")
+
+system_cxx_toolchain(
+    name = "cxx",
+    visibility = ["PUBLIC"],
+    c_flags = ["-DWIN32", "/Z7"],
+    cxx_flags = ["-DWIN32", "/Z7"],
+    link_flags = ["/DEBUG"],
+)
+
+system_python_bootstrap_toolchain(
+    name = "python_bootstrap",
+    visibility = ["PUBLIC"],
+)

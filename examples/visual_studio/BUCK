@@ -1,0 +1,14 @@
+cxx_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    link_style = "shared",
+    deps = [":print"],
+    resources = [":print"]
+)
+
+cxx_library(
+    name = "print",
+    srcs = ["library.cpp"],
+    exported_headers = glob(["**/*.hpp"]),
+    visibility = ["PUBLIC"],
+)
