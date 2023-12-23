@@ -1,8 +1,6 @@
 cxx_binary(
     name = "main",
-    srcs = ["main.cpp"],
-    link_style = "static",
-    deps = [":print"],
+    srcs = ["main.cpp", "library.cpp"],
 )
 
 cxx_library(

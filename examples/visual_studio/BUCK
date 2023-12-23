@@ -1,6 +1,6 @@
 cxx_binary(
     name = "main",
-    srcs = ["main.cpp"],
+    srcs = ["main.c"],
     link_style = "shared",
     deps = [":print"],
     resources = [":print"]

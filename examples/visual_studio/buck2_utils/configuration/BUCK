@@ -1,0 +1,15 @@
+config_setting(
+    name = "debug",
+    constraint_values = [
+        "//buck2_utils/configuration/constraints:debug",
+    ],
+    visibility = ["PUBLIC"],
+)
+
+config_setting(
+    name = "release",
+    constraint_values = [
+        "//buck2_utils/configuration/constraints:release",
+    ],
+    visibility = ["PUBLIC"],
+)

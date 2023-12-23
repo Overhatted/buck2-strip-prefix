@@ -7,4 +7,17 @@
  * of this source tree.
  */
 
-void print_hello();
+#ifdef _WIN32
+#define DLLEXPORT __declspec(dllexport)
+#else
+#define DLLEXPORT __declspec(dllimport)
+#endif
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+DLLEXPORT void print_hello();
+#ifdef __cplusplus
+}
+#endif
